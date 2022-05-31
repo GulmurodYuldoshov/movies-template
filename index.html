@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movies template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <div class="container ">
+        <form class="search-form js-form mb-2 my-5 d-flex" action="https://echo.html.ru" method="GET" autocomplete="off">
+            <input class="search-input form-control w-50 mx-2" type="search" name="search" id="movies-search" placeholder="Search...">
+            
+            <select class=" form-control w-25 js-category" name="select" id="categories-select">
+              <option value="All" selected="">All</option>
+           </select>
+      
+            <select class="sort-selct form-control mx-2 w-25" name="rating" id="rating-select">
+              <option value="az">Alphabet (A-Z)</option>
+              <option value="za">Alphabet (Z-A)</option>
+              <option value="rating_asc">Rating (1-10)</option>
+              <option value="rating_desc">Rating (10-1)</option>
+              <option value="year_asc">Year (Old to New)</option>
+              <option value="year_desc">Year (New to Old)</option>
+            </select>
+            <button class="search-button btn bg-danger text-white w-25" type="submit">Search</button>
+        </form>
+
+        <ul class="js-list d-flex flex-wrap my-5 px-0 justify-content-between"></ul>
+        <template class="js-template">
+            <div class="card" style="width: 16rem; height:28rem; ">
+                <img src="..." class="card-img-top" style="width:100%; height:160px" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold text-center"  style="height: 40px;">Card title</h5>
+                  <p class="card-text text-center "  style="height: 40px;" >
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                  <div class="d-flex align-items-center justify-content-center mb-2">
+                    <span class="star fs-5 text-danger">★</span>
+                    <span class="movie__rating font-weight-bold">7</span>
+                  </div>
+                  <h4 class="year text-center m-0 mb-4 text-success fw-bold"></h4>
+                    <!-- modal -->
+
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content " style="height: 550px; overflow-y: scroll; ">
+                        <div class="modal-header ">
+                          <h5 class="modal-title" id="exampleModalToggleLabel">About me</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <img class="modal-img mx-auto my-3" width="400" height="200" src="" alt="rams">
+                        <h3 class="title-modal text-center"></h3>
+                        <h4 class=" d-flex justify-content-between ms-4">Genre: <p class="m-0  me-4  modal-text fw-normal"></p></h4>
+                        <h4 class=" d-flex justify-content-between ms-4">Year: <p class="modal-year m-0 me-4  fw-normal"></p></h4>
+                        <h4 class=" d-flex justify-content-between ms-4 ">Language: <p class="modal-language  m-0 me-4 fw-normal "></p></h4>
+                        <h4 class="  d-flex justify-content-between ms-4">Runtime: <p class="modal-time m-0  fw-normal me-4"></p> </h4>
+                        <h4 class="ms-4 mt-3 my-3">Summary: <p class="modal-list fw-normal m-0 me-4"></p></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"  tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <a class="btn btn-primary d-block" data-bs-toggle="modal" href="#exampleModalToggle" role="button">See More </a>
+                </div>
+              </div>
+        </template>
+    </div>
+    
+<script src="js/movies.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
