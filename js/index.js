@@ -164,7 +164,7 @@ let handleNextPage =()=>{
     if(page===maxPage){
         elNextBtn.disabled = true
     }else{
-        elPrevBtn.disabled = false
+      
         elNextBtn.disabled = false
     }
 }
