@@ -10,7 +10,7 @@ const elPrevBtn = document.querySelector('.prev-btn')
 const elNextBtn = document.querySelector('.next-btn')
 const elPageCount = document.querySelector('.page-count')
 
-let limt = 10
+let limt = 8
 let page = 1
 let maxPage = Math.ceil(KINOLAR.length / limt)
 console.log(maxPage)
