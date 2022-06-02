@@ -7,12 +7,29 @@
     <title>movies template</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <style>
+      body{
+       background: linear-gradient(#fbe0e0, #babee8);
+      }
+      .link{
+        display: block;
+        width:100%;
+        height:160px;
+        transition: 3 ease;
+        border-radius: 5px;
+      }
+      .link:hover{
+        box-shadow: 0 0 3px 3px rgb(80, 80, 73);
+        cursor: pointer ;
+      }
+   
+    </style>
 </head>
 <body>
    
     <div class="container ">
         <form class="search-form js-form mb-2 my-5 d-flex" action="https://echo.html.ru" method="GET" autocomplete="off">
-            <input class="search-input form-control w-50 mx-2" type="search" name="search" id="movies-search" placeholder="Search...">
+            <input class="search-input form-control w-50 mx-2 js-search" type="search" name="search" id="movies-search" placeholder="Search...">
             
             <select class=" form-control w-25 js-category" name="select" id="categories-select">
               <option value="All" selected="">All</option>
@@ -21,18 +38,27 @@
             <select class="sort-selct form-control mx-2 w-25" name="rating" id="rating-select">
               <option value="az">Alphabet (A-Z)</option>
               <option value="za">Alphabet (Z-A)</option>
-              <option value="rating_asc">Rating (1-10)</option>
-              <option value="rating_desc">Rating (10-1)</option>
-              <option value="year_asc">Year (Old to New)</option>
-              <option value="year_desc">Year (New to Old)</option>
+              <option value="lh">Rating (1-10)</option>
+              <option value="hl">Rating (10-1)</option>
+              <option value="on">Year (Old to New)</option>
+              <option value="no">Year (New to Old)</option>
             </select>
             <button class="search-button btn bg-danger text-white w-25" type="submit">Search</button>
         </form>
 
-        <ul class="js-list d-flex flex-wrap my-5 px-0 justify-content-between"></ul>
+        <ul class="js-list d-flex flex-wrap my-4   px-0 justify-content-between"></ul>
+        <ul class="pagination">
+          <li class="page-item"><button class="page-link prev-btn">Previous</button></li>
+          <li class="page-count"></li>
+          <!-- <li class="page-item"><button class="page-link">1</button></li>
+          <li class="page-item"><button class="page-link">2</button></li>
+          <li class="page-item"><button class="page-link">3</button></li> -->
+          <li class="page-item "><button class="page-link next-btn">Next</button></li>
+        </ul>
+
         <template class="js-template">
             <div class="card" style="width: 16rem; height:28rem; ">
-                <img src="..." class="card-img-top" style="width:100%; height:160px" alt="...">
+              <a class="link"  href=""><img src="..." class="card-img-top" style="width:100%; height:160px" alt="..."></a>
                 <div class="card-body">
                   <h5 class="card-title fw-bold text-center"  style="height: 40px;">Card title</h5>
                   <p class="card-text text-center "  style="height: 40px;" >
