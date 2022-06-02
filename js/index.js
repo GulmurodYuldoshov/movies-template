@@ -5,7 +5,7 @@ const elCardTemplate = document.querySelector('.js-template').content;
 const elList = document.querySelector('.js-list')
 const elSearchInput = document.querySelector('.js-search')
 const elSort = document.querySelector('.sort-selct')
-const KINOLAR = movies.slice(0,100)
+const KINOLAR = movies.slice(0,96)
 const elPrevBtn = document.querySelector('.prev-btn')
 const elNextBtn = document.querySelector('.next-btn')
 const elPageCount = document.querySelector('.page-count')
@@ -186,4 +186,4 @@ let  handlePrevPage=()=>{
 elPrevBtn.addEventListener('click', handlePrevPage)
 elNextBtn.addEventListener('click', handleNextPage)
 elForm.addEventListener('submit', handleFilter);
-renderMovies( KINOLAR.slice(0,10))
+renderMovies( KINOLAR.slice(0,8))
