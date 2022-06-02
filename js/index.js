@@ -5,7 +5,7 @@ const elCardTemplate = document.querySelector('.js-template').content;
 const elList = document.querySelector('.js-list')
 const elSearchInput = document.querySelector('.js-search')
 const elSort = document.querySelector('.sort-selct')
-const KINOLAR = movies.slice(0,96)
+const KINOLAR = movies.slice(0,200)
 const elPrevBtn = document.querySelector('.prev-btn')
 const elNextBtn = document.querySelector('.next-btn')
 const elPageCount = document.querySelector('.page-count')
@@ -164,7 +164,7 @@ let handleNextPage =()=>{
     if(page===maxPage){
         elNextBtn.disabled = true
     }else{
-      
+        elPrevBtn.disabled  = false
         elNextBtn.disabled = false
     }
 }
